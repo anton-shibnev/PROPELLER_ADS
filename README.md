@@ -2,7 +2,7 @@
 
 ## Clone the repo and install dependencies
 
-### [GH Page](https://shibnev.github.io/PROPELLER_ADS/dist/index.html)
+### [GH Page](https://shibnev.github.io/PROPELLER_ADS/dist/)
 
 ```bash
 git clone https://github.com/shibnev/PROPELLER_ADS.git
