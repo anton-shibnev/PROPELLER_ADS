@@ -1,0 +1,74 @@
+.video-modal {
+  $this: &;
+
+  background-color: rgba($black, 0.3);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transition: opacity $trs;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // hide
+  opacity: 0;
+  pointer-events: none;
+
+  &--active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 200;
+
+    #{$this}__inner {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @include bem(
+    'inner',
+    (
+      padding-top: 3%,
+      padding-bottom: 3%,
+      width: (
+        'mob': 100vw,
+        'xs': 100%,
+      ),
+      height: (
+        'mob': 100vh,
+        'xs': auto,
+      ),
+      display: flex,
+      flex-direction: column,
+      justify-content: center,
+      max-width: (
+        'mob': 768px,
+        'xs': 500px,
+      ),
+      background-color: $white,
+      border-radius: 6px,
+      position: relative,
+      transform: translateY(10%),
+      opacity: 0,
+      transition-delay: 2s,
+      '@transition': (
+        opacity,
+        transform,
+      ),
+    )
+  );
+
+  @include bem(
+    'title',
+    (
+      text-align: center,
+      font-weight: 900,
+      font-size: 24px,
+      line-height: 1,
+    )
+  );
+}

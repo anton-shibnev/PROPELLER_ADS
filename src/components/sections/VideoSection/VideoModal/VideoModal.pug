@@ -1,0 +1,12 @@
+include /components/ui/Container/Container
+include /components/ui/Input/Input
+include ./Form/Form
+
+mixin VideoModal()
+  - const B = `video-modal`;
+
+  div(class=`${B}` id=`videoModal`)&attributes(attributes)
+    div(class=`${B}__inner`)
+      +Container()(class=`${B}__container`)
+        h2(class=`${B}__title`) Для продолжения просмотра нужно пройти регистрацию
+        +Form()

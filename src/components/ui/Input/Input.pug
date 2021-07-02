@@ -1,0 +1,16 @@
+mixin Input({type='text', name, id, placeholder=false, label=false, required=true})
+  - const B = `input`;
+
+  div(class=`${B}`)&attributes(attributes)
+    if label
+      div(class=`${B}__wrap-label`)
+        label(class=`${B}__label` for=id) #{ label }
+    div(class=`${B}__wrap`)
+      input(
+          class=`${B}__input`
+          placeholder=placeholder
+          type=type
+          name=name
+          id=id
+          required=required
+        )

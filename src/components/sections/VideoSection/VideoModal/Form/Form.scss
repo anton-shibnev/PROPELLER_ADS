@@ -1,0 +1,19 @@
+.form {
+  $this: &;
+
+  @include _(
+    (
+      margin-top: 25px,
+      display: flex,
+      flex-direction: column,
+      gap: 20px,
+    )
+  );
+
+  @include bem(
+    'btn',
+    (
+      text-align: center,
+    )
+  );
+}

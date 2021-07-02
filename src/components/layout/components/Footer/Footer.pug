@@ -1,0 +1,9 @@
+include /components/ui/Container/Container
+include ../Logo/Logo
+
+mixin Footer()
+  - const B = 'footer';
+  - const year = new Date().getFullYear();
+  
+  +Outer(B, B, 'footer')
+    p(class=`${B}__copyright`) © copyright #{year}

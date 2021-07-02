@@ -1,0 +1,10 @@
+include /components/ui/Icon/Icon
+
+mixin SocList(list)
+  - const B = `soc-list`;
+
+  ul(class=`${B}`)&attributes(attributes)
+    each item in list
+      li(class=`${B}__link`)
+        a(class=`${B}__link` href=item.href)
+          +Icon(item.icon)(class=`${B}__item-icon`)

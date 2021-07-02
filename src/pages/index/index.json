@@ -1,0 +1,30 @@
+{
+  "head": {
+    "title": "title - index",
+    "description": "description - index"
+  },
+  "header": {
+    "title": "header title",
+    "socList": [
+      {
+        "href": "#",
+        "icon": "vk"
+      },
+      {
+        "href": "#",
+        "icon": "instagram"
+      },
+      {
+        "href": "#",
+        "icon": "facebook"
+      }
+    ]
+  },
+  "footer": {
+  },
+  "hero": {
+    "title": "Hero Titlte",
+    "desc": "Hero desc",
+    "btn": "Hero Btn"
+  }
+}

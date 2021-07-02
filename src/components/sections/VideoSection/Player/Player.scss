@@ -1,0 +1,43 @@
+.player {
+  $this: &;
+  position: relative;
+
+  @include bem(
+    ('play'),
+    (
+      '@extend': (
+        '%abs-center',
+        '%btn-reset',
+      ),
+      z-index: 5,
+      '&:focus': (
+        outline: none,
+      ),
+    )
+  );
+
+  @include bem(
+    'icon',
+    (
+      z-index: 5,
+      '@wh': 50px,
+      '@extend': '%abs-center',
+      opacity: 0,
+      transform: translate(-50%, -50%) scale(0),
+      transition: $trs,
+      '&--active': (
+        opacity: 1,
+        transform: translate(-50%, -50%) scale(1),
+      ),
+    )
+  );
+
+  @include bem(
+    'video',
+    (
+      width: 100%,
+      background-color: $black,
+      border-radius: 6px,
+    )
+  );
+}

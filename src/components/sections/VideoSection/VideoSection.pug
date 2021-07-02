@@ -1,0 +1,10 @@
+include /components/ui/Outer/Outer
+include ./Player/Player
+include ./VideoModal/VideoModal
+
+mixin VideoSection(data)
+  - const B = 'video-section'
+
+  +Outer(B)
+    +Player()(class=`${B}__player`)
+    +VideoModal()

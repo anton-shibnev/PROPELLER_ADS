@@ -1,0 +1,29 @@
+.soc-list {
+  $this: &;
+
+  @include _(
+    (
+      '@extend': '%list-reset',
+      justify-content: center,
+      display: flex,
+      gap: 14px,
+    )
+  );
+
+  @include bem(
+    'item',
+    (
+      display: flex,
+    )
+  );
+
+  @include bem(
+    'item-icon',
+    (
+      '@wh': 30px,
+      '& *': (
+        fill: $dark,
+      ),
+    )
+  );
+}

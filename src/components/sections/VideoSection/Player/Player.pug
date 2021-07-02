@@ -1,0 +1,12 @@
+mixin Player()
+  - const B = `player`;
+
+  div(class=`${B}` id=`${B}`)&attributes(attributes)
+    video(class=`${B}__video` id='player' poster='')
+      source(src='assets/video/BROWN_SUGAR_SALMON.mp4' type='video/mp4')
+    button(class=`${B}__play`)
+      +Icon('play')(class=`${B}__icon ${B}__icon--play ${B}__icon--active`)
+      +Icon('pause')(class=`${B}__icon ${B}__icon--pause`)
+
+    //- div(class=`${B}__bottom`)
+    //-   button(class=`${B}__bottom-play`)

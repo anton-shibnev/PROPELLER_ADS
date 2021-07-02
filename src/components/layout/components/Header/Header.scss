@@ -1,0 +1,26 @@
+.header {
+  @include bem(
+    'container',
+    (
+      display: flex,
+      align-items: center,
+      padding-top: (
+        'mob': 20px,
+      ),
+      justify-content: space-between,
+      padding-bottom: (
+        'mob': 20px,
+      ),
+    )
+  );
+
+  @include bem(
+    'logo',
+    (
+      '@wh': (
+        'mob': 60px,
+        'xs': 80px,
+      ),
+    )
+  );
+}

@@ -1,0 +1,12 @@
+mixin Form()
+  - const B = `form`;
+
+  form(class=`${B}`)
+    +Input({
+      type: 'text',
+      name: 'email',
+      id: 'emailInput',
+      placeholder: 'email',
+      label: false,
+      required: false})(class=`${B}__input`)
+    +Btn()(class=`${B}__btn`) вжух

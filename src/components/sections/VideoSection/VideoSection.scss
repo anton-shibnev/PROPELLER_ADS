@@ -1,0 +1,14 @@
+.video-section {
+  @include _(
+    (
+      padding-top: (
+        'mob': 20px,
+        'xs': 40px,
+      ),
+      padding-bottom: (
+        'mob': 20px,
+        'xs': 40px,
+      ),
+    )
+  );
+}
