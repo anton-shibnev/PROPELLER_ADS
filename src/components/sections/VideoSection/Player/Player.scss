@@ -1,6 +1,14 @@
 .player {
   $this: &;
+
   position: relative;
+
+  &:hover {
+    #{$this}__play {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
 
   @include bem(
     ('play'),
@@ -10,6 +18,9 @@
         '%btn-reset',
       ),
       z-index: 5,
+      opacity: 0,
+      transform: translate(-50%, -50%) scale(0),
+      transition: $trs,
       '&:focus': (
         outline: none,
       ),

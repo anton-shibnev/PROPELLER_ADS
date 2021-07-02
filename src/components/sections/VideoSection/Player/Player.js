@@ -10,6 +10,7 @@ export class Player {
     this.$icons = [...this.$el.querySelectorAll(`.${this.className}__icon`)];
 
     this.currentTime = 0;
+    this.step = 1000;
 
     this.toggleVideo();
     this.checkCurrentTime();
@@ -17,17 +18,19 @@ export class Player {
 
   checkCurrentTime() {
     this.$video.addEventListener('timeupdate', () => {
-      this.currentTime = Math.floor(this.$video.currentTime);
+      setTimeout(() => {
+        this.currentTime = Math.floor(this.$video.currentTime);
 
-      if (this.currentTime === this.limit) {
-        this.pause();
-        this.modal.show();
-      }
+        if (this.currentTime === this.limit) {
+          this.pause();
+          this.modal.show();
+        }
 
-      if (this.formSubmit) {
-        this.play();
-        this.modal.hide();
-      }
+        if (this.formSubmit) {
+          this.play();
+          this.modal.hide();
+        }
+      }, this.step);
     });
   }
 
